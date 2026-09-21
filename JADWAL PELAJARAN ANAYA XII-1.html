@@ -1,0 +1,3282 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+JADWAL PELAJARAN KELAS XII-1 SMAN 2 CIMAHI
+</title>
+
+
+<style>
+
+/* =====================================================
+   DASAR
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family:
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff1f2,
+        #eef2ff,
+        #ecfeff,
+        #fefce8
+    );
+
+    color: #1e293b;
+
+    min-height: 100vh;
+
+    transition: 0.4s;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   BACKGROUND BUBBLES
+===================================================== */
+
+.bubble {
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    opacity: .25;
+
+    z-index: -1;
+
+    animation:
+    floating 8s infinite ease-in-out;
+}
+
+.bubble1 {
+
+    width: 180px;
+    height: 180px;
+
+    background: #f472b6;
+
+    top: 10%;
+    left: -50px;
+}
+
+.bubble2 {
+
+    width: 230px;
+    height: 230px;
+
+    background: #60a5fa;
+
+    top: 55%;
+    right: -70px;
+
+    animation-delay: 2s;
+}
+
+.bubble3 {
+
+    width: 130px;
+    height: 130px;
+
+    background: #34d399;
+
+    bottom: 5%;
+    left: 20%;
+
+    animation-delay: 4s;
+}
+
+@keyframes floating {
+
+    0%,100% {
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+        translateY(-35px)
+        rotate(20deg);
+
+    }
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    position: relative;
+
+    padding:
+    45px 20px 55px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #7c3aed,
+        #ec4899,
+        #f97316,
+        #eab308
+    );
+
+    background-size: 300% 300%;
+
+    animation:
+    gradientMove 8s ease infinite;
+
+    overflow: hidden;
+
+    box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.20);
+
+}
+
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+header::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background:
+    rgba(255,255,255,.12);
+
+    border-radius: 50%;
+
+    top: -100px;
+    left: 5%;
+
+}
+
+
+header::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background:
+    rgba(255,255,255,.10);
+
+    border-radius: 50%;
+
+    bottom: -180px;
+    right: 5%;
+
+}
+
+
+header h1 {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size:
+    clamp(25px,5vw,46px);
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+    3px 4px 0
+    rgba(0,0,0,.15);
+
+}
+
+
+header p {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 12px;
+
+    font-size: 17px;
+
+    opacity: .95;
+
+}
+
+
+.school-badge {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding: 8px 18px;
+
+    border-radius: 30px;
+
+    background:
+    rgba(255,255,255,.20);
+
+    backdrop-filter:
+    blur(10px);
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+
+    width: 94%;
+
+    max-width: 1250px;
+
+    margin:
+    -25px auto 40px;
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboard {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(220px,1fr)
+    );
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.info-card {
+
+    background:
+    rgba(255,255,255,.90);
+
+    backdrop-filter:
+    blur(15px);
+
+    padding: 23px;
+
+    border-radius: 25px;
+
+    box-shadow:
+    0 12px 35px
+    rgba(15,23,42,.12);
+
+    border:
+    2px solid
+    rgba(255,255,255,.8);
+
+    transition: .3s;
+
+}
+
+
+.info-card:hover {
+
+    transform:
+    translateY(-7px);
+
+    box-shadow:
+    0 18px 40px
+    rgba(15,23,42,.18);
+
+}
+
+
+.info-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.info-card h3 {
+
+    color:
+    #6366f1;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+
+}
+
+
+#clock {
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    background:
+    linear-gradient(
+        90deg,
+        #6366f1,
+        #ec4899
+    );
+
+    -webkit-background-clip:
+    text;
+
+    color:
+    transparent;
+
+}
+
+
+/* =====================================================
+   CONTROL
+===================================================== */
+
+.controls {
+
+    background:
+    white;
+
+    padding: 18px;
+
+    border-radius: 22px;
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.08);
+
+}
+
+
+.controls input,
+.controls select {
+
+    flex: 1;
+
+    min-width: 200px;
+
+    padding: 13px 15px;
+
+    border:
+    2px solid #e2e8f0;
+
+    border-radius: 14px;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+.controls input:focus,
+.controls select:focus {
+
+    border-color:
+    #8b5cf6;
+
+}
+
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 14px;
+
+    padding:
+    12px 17px;
+
+    font-weight: bold;
+
+    color: white;
+
+    transition: .25s;
+
+}
+
+
+button:hover {
+
+    transform:
+    translateY(-3px)
+    scale(1.02);
+
+    box-shadow:
+    0 8px 18px
+    rgba(0,0,0,.15);
+
+}
+
+
+.dark-button {
+
+    background:
+    linear-gradient(
+        135deg,
+        #334155,
+        #0f172a
+    );
+
+}
+
+
+/* =====================================================
+   JUDUL BAGIAN
+===================================================== */
+
+.section-title {
+
+    text-align: center;
+
+    margin:
+    35px 0 20px;
+
+}
+
+
+.section-title h2 {
+
+    font-size: 30px;
+
+    color:
+    #4f46e5;
+
+}
+
+
+.section-title p {
+
+    color:
+    #64748b;
+
+    margin-top: 6px;
+
+}
+
+
+/* =====================================================
+   JADWAL
+===================================================== */
+
+.schedule {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(310px,1fr)
+    );
+
+    gap: 22px;
+
+}
+
+
+.day {
+
+    background:
+    rgba(255,255,255,.94);
+
+    border-radius: 25px;
+
+    padding: 20px;
+
+    box-shadow:
+    0 12px 30px
+    rgba(0,0,0,.09);
+
+    transition: .3s;
+
+}
+
+
+.day:hover {
+
+    transform:
+    translateY(-5px);
+
+}
+
+
+.day-title {
+
+    display: flex;
+
+    justify-content:
+    space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+    padding-bottom: 12px;
+
+    border-bottom:
+    3px solid #e2e8f0;
+
+}
+
+
+.day-title h2 {
+
+    color:
+    #4f46e5;
+
+}
+
+
+.day-emoji {
+
+    font-size: 30px;
+
+}
+
+
+/* =====================================================
+   LESSON CARD
+===================================================== */
+
+.lesson {
+
+    position: relative;
+
+    padding: 16px;
+
+    margin: 11px 0;
+
+    border-radius: 18px;
+
+    background:
+    #f8fafc;
+
+    border-left:
+    6px solid #6366f1;
+
+    transition: .3s;
+
+    overflow: hidden;
+
+}
+
+
+.lesson::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    background:
+    rgba(255,255,255,.45);
+
+    right: -25px;
+
+    top: -25px;
+
+}
+
+
+.lesson:hover {
+
+    transform:
+    translateX(5px)
+    scale(1.02);
+
+}
+
+
+.lesson-time {
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    color:
+    #6366f1;
+
+}
+
+
+.lesson-name {
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    margin-top: 4px;
+
+}
+
+
+.teacher {
+
+    color:
+    #64748b;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+
+}
+
+
+.subject-icon {
+
+    font-size: 24px;
+
+    float: right;
+
+}
+
+
+.lesson.active {
+
+    border-left-color:
+    #22c55e !important;
+
+    background:
+    linear-gradient(
+        135deg,
+        #dcfce7,
+        #bbf7d0
+    ) !important;
+
+    box-shadow:
+    0 0 25px
+    rgba(34,197,94,.40);
+
+    animation:
+    activePulse 2s infinite;
+
+}
+
+
+@keyframes activePulse {
+
+    0%,100% {
+
+        box-shadow:
+        0 0 15px
+        rgba(34,197,94,.25);
+
+    }
+
+    50% {
+
+        box-shadow:
+        0 0 30px
+        rgba(34,197,94,.55);
+
+    }
+
+}
+
+
+.active-badge {
+
+    display: inline-block;
+
+    margin-top: 8px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background:
+    #22c55e;
+
+    color: white;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   WARNA MATA PELAJARAN
+===================================================== */
+
+.subject-inggris {
+    border-left-color: #ec4899;
+}
+
+.subject-indonesia {
+    border-left-color: #f97316;
+}
+
+.subject-informatika {
+    border-left-color: #06b6d4;
+}
+
+.subject-geografi {
+    border-left-color: #22c55e;
+}
+
+.subject-fisika {
+    border-left-color: #6366f1;
+}
+
+.subject-kimia {
+    border-left-color: #8b5cf6;
+}
+
+.subject-matematika {
+    border-left-color: #ef4444;
+}
+
+.subject-sejarah {
+    border-left-color: #eab308;
+}
+
+.subject-pjok {
+    border-left-color: #14b8a6;
+}
+
+.subject-seni {
+    border-left-color: #f43f5e;
+}
+
+.subject-pai {
+    border-left-color: #10b981;
+}
+
+.subject-ppkn {
+    border-left-color: #3b82f6;
+}
+
+.subject-sunda {
+    border-left-color: #f59e0b;
+}
+
+.subject-bk {
+    border-left-color: #a855f7;
+}
+
+
+/* =====================================================
+   TUGAS
+===================================================== */
+
+.task-section {
+
+    margin-top: 40px;
+
+}
+
+
+.task-box {
+
+    background:
+    rgba(255,255,255,.95);
+
+    padding: 25px;
+
+    border-radius: 25px;
+
+    box-shadow:
+    0 12px 35px
+    rgba(0,0,0,.10);
+
+}
+
+
+.task-form {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(180px,1fr)
+    );
+
+    gap: 10px;
+
+    margin-top: 18px;
+
+}
+
+
+.task-form input {
+
+    padding: 13px;
+
+    border:
+    2px solid #e2e8f0;
+
+    border-radius: 13px;
+
+    outline: none;
+
+}
+
+
+.add-task {
+
+    background:
+    linear-gradient(
+        135deg,
+        #8b5cf6,
+        #ec4899
+    );
+
+}
+
+
+.task-list {
+
+    margin-top: 25px;
+
+}
+
+
+.task {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 17px;
+
+    margin-bottom: 12px;
+
+    border-radius: 18px;
+
+    background:
+    #f8fafc;
+
+    border-left:
+    6px solid #8b5cf6;
+
+    transition: .25s;
+
+}
+
+
+.task:hover {
+
+    transform:
+    translateX(5px);
+
+}
+
+
+.task-info {
+
+    flex: 1;
+
+}
+
+
+.task-info strong {
+
+    display: block;
+
+    font-size: 16px;
+
+}
+
+
+.task-info small {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color:
+    #64748b;
+
+}
+
+
+.task.done {
+
+    opacity: .55;
+
+}
+
+
+.task.done .task-info strong {
+
+    text-decoration:
+    line-through;
+
+}
+
+
+.complete {
+
+    background:
+    #22c55e;
+
+}
+
+
+.delete {
+
+    background:
+    #ef4444;
+
+}
+
+
+/* =====================================================
+   STATISTIK
+===================================================== */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(
+        auto-fit,
+        minmax(180px,1fr)
+    );
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+}
+
+
+.stat {
+
+    padding: 18px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+.stat-number {
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+}
+
+
+.stat-total {
+
+    background:
+    linear-gradient(
+        135deg,
+        #6366f1,
+        #8b5cf6
+    );
+
+}
+
+
+.stat-done {
+
+    background:
+    linear-gradient(
+        135deg,
+        #10b981,
+        #22c55e
+    );
+
+}
+
+
+.stat-pending {
+
+    background:
+    linear-gradient(
+        135deg,
+        #f97316,
+        #ef4444
+    );
+
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progress-box {
+
+    margin-top: 20px;
+
+}
+
+
+.progress-background {
+
+    height: 15px;
+
+    background:
+    #e2e8f0;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.progress-bar {
+
+    height: 100%;
+
+    width: 0%;
+
+    background:
+    linear-gradient(
+        90deg,
+        #22c55e,
+        #06b6d4,
+        #6366f1,
+        #ec4899
+    );
+
+    transition:
+    width .5s;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    margin-top: 50px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #312e81,
+        #7c3aed,
+        #be185d
+    );
+
+}
+
+
+footer strong {
+
+    font-size: 20px;
+
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+body.dark {
+
+    background:
+    linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #172554
+    );
+
+    color: #e2e8f0;
+
+}
+
+
+body.dark .info-card,
+body.dark .controls,
+body.dark .day,
+body.dark .task-box {
+
+    background:
+    rgba(30,41,59,.95);
+
+    color: #e2e8f0;
+
+}
+
+
+body.dark .lesson,
+body.dark .task {
+
+    background:
+    #334155;
+
+}
+
+
+body.dark .controls input,
+body.dark .controls select,
+body.dark .task-form input {
+
+    background:
+    #334155;
+
+    color: white;
+
+}
+
+
+body.dark .section-title p {
+
+    color:
+    #94a3b8;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:600px) {
+
+    header {
+
+        padding:
+        35px 15px 45px;
+
+    }
+
+
+    header h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    header p {
+
+        font-size: 14px;
+
+    }
+
+
+    .container {
+
+        width: 92%;
+
+    }
+
+
+    .schedule {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .task {
+
+        flex-direction:
+        column;
+
+        align-items:
+        flex-start;
+
+    }
+
+
+    .task button {
+
+        width: 100%;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- BACKGROUND -->
+
+<div class="bubble bubble1"></div>
+<div class="bubble bubble2"></div>
+<div class="bubble bubble3"></div>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="school-badge">
+        🏫 SMAN 2 CIMAHI
+    </div>
+
+    <h1>
+        📚 JADWAL PELAJARAN
+        <br>
+        KELAS XII-1
+    </h1>
+
+    <p>
+        ✨ SMAN 2 CIMAHI • Belajar • Berkarya • Berprestasi ✨
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- =====================================================
+     DASHBOARD
+===================================================== -->
+
+<div class="dashboard">
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            🕐
+        </div>
+
+        <h3>
+            JAM SEKARANG
+        </h3>
+
+        <div id="clock">
+            00:00:00
+        </div>
+
+        <small id="date">
+            Memuat tanggal...
+        </small>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            📖
+        </div>
+
+        <h3>
+            PELAJARAN SEKARANG
+        </h3>
+
+        <div id="currentLesson">
+            Memuat...
+        </div>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            🚀
+        </div>
+
+        <h3>
+            PELAJARAN BERIKUTNYA
+        </h3>
+
+        <div id="nextLesson">
+            Memuat...
+        </div>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            ⏳
+        </div>
+
+        <h3>
+            COUNTDOWN
+        </h3>
+
+        <div id="countdown">
+            --:--:--
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     CONTROL
+===================================================== -->
+
+<div class="controls">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Cari mata pelajaran atau guru..."
+        oninput="searchSchedule()"
+    >
+
+
+    <select
+        id="dayFilter"
+        onchange="filterDay()"
+    >
+
+        <option value="all">
+            📅 Semua Hari
+        </option>
+
+        <option value="Senin">
+            🌟 Senin
+        </option>
+
+        <option value="Selasa">
+            🚀 Selasa
+        </option>
+
+        <option value="Rabu">
+            🌈 Rabu
+        </option>
+
+        <option value="Kamis">
+            ⭐ Kamis
+        </option>
+
+        <option value="Jumat">
+            🎉 Jumat
+        </option>
+
+    </select>
+
+
+    <button
+        class="dark-button"
+        onclick="toggleDark()"
+    >
+
+        🌙 Mode Gelap
+
+    </button>
+
+</div>
+
+
+<!-- =====================================================
+     JUDUL JADWAL
+===================================================== -->
+
+<div class="section-title">
+
+    <h2>
+        🗓️ JADWAL MINGGUAN
+    </h2>
+
+    <p>
+        Jadwal lengkap kelas XII-1
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     JADWAL
+===================================================== -->
+
+<div
+    class="schedule"
+    id="schedule"
+></div>
+
+
+<!-- =====================================================
+     TUGAS
+===================================================== -->
+
+<div class="task-section">
+
+    <div class="task-box">
+
+        <div class="section-title">
+
+            <h2>
+                📝 PENGINGAT TUGAS
+            </h2>
+
+            <p>
+                Jangan sampai ada tugas yang terlewat!
+            </p>
+
+        </div>
+
+
+        <div class="task-form">
+
+            <input
+                type="text"
+                id="taskName"
+                placeholder="📌 Nama tugas"
+            >
+
+
+            <input
+                type="text"
+                id="taskSubject"
+                placeholder="📚 Mata pelajaran"
+            >
+
+
+            <input
+                type="date"
+                id="taskDate"
+            >
+
+
+            <button
+                class="add-task"
+                onclick="addTask()"
+            >
+
+                ➕ TAMBAH TUGAS
+
+            </button>
+
+        </div>
+
+
+        <!-- STATISTIK -->
+
+        <div class="stats">
+
+
+            <div class="stat stat-total">
+
+                <div class="stat-number"
+                     id="totalTasks">
+
+                    0
+
+                </div>
+
+                <div>
+                    📚 Total Tugas
+                </div>
+
+            </div>
+
+
+            <div class="stat stat-done">
+
+                <div class="stat-number"
+                     id="doneTasks">
+
+                    0
+
+                </div>
+
+                <div>
+                    ✅ Selesai
+                </div>
+
+            </div>
+
+
+            <div class="stat stat-pending">
+
+                <div class="stat-number"
+                     id="pendingTasks">
+
+                    0
+
+                </div>
+
+                <div>
+                    🔥 Belum Selesai
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROGRESS -->
+
+        <div class="progress-box">
+
+            <p>
+                🎯 Progress tugas:
+                <strong id="progressText">
+                    0%
+                </strong>
+            </p>
+
+            <br>
+
+            <div class="progress-background">
+
+                <div
+                    class="progress-bar"
+                    id="progressBar"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TASK LIST -->
+
+        <div
+            class="task-list"
+            id="taskList"
+        ></div>
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <strong>
+        🎓 KELAS XII-1 SMAN 2 CIMAHI
+    </strong>
+
+    <br><br>
+
+    ✨ Semangat belajar dan raih cita-citamu! ✨
+
+    <br>
+
+    📚 Learn • Grow • Achieve 📚
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   DATA JADWAL
+===================================================== */
+
+const scheduleData = {
+
+
+"Senin": [
+
+    ["06:30","07:45",
+    "Upacara Bendera",
+    "",
+    "🏳️"],
+
+    ["07:45","09:45",
+    "Bahasa Inggris",
+    "Bapak Yayan",
+    "🇬🇧"],
+
+    ["09:45","10:05",
+    "Istirahat Pertama",
+    "",
+    "☕"],
+
+    ["10:05","11:25",
+    "Bahasa Indonesia",
+    "Ibu Yuyun",
+    "🇮🇩"],
+
+    ["11:25","12:05",
+    "Informatika",
+    "Bapak Tresna",
+    "💻"],
+
+    ["12:05","12:35",
+    "Istirahat Kedua",
+    "",
+    "🍱"],
+
+    ["12:35","13:15",
+    "Informatika",
+    "Bapak Tresna",
+    "💻"],
+
+    ["13:15","15:15",
+    "Geografi",
+    "Bapak Ratsu",
+    "🌍"]
+
+],
+
+
+"Selasa": [
+
+    ["06:30","07:00",
+    "Pembiasaan/Kokurikuler",
+    "",
+    "🌱"],
+
+    ["07:00","08:20",
+    "Fisika",
+    "Ibu Nia",
+    "⚛️"],
+
+    ["08:20","09:40",
+    "Geografi",
+    "Bapak Ratsu",
+    "🌍"],
+
+    ["09:40","10:00",
+    "Istirahat Pertama",
+    "",
+    "☕"],
+
+    ["10:00","11:20",
+    "Sejarah",
+    "Ibu Diah",
+    "🏛️"],
+
+    ["11:20","12:00",
+    "Informatika",
+    "Bapak Tresna",
+    "💻"],
+
+    ["12:00","12:30",
+    "Istirahat Kedua",
+    "",
+    "🍱"],
+
+    ["12:30","13:50",
+    "Informatika",
+    "Bapak Tresna",
+    "💻"],
+
+    ["13:50","15:10",
+    "PKWU",
+    "Ibu Rizka",
+    "💡"]
+
+],
+
+
+"Rabu": [
+
+    ["06:30","07:00",
+    "Pembiasaan/Kokurikuler",
+    "",
+    "🌱"],
+
+    ["07:00","09:00",
+    "Kimia",
+    "Ibu ANi",
+    "🧪"],
+
+    ["09:00","09:40",
+    "Bahasa Indonesia",
+    "Ibu Yuyun",
+    "🇮🇩"],
+
+    ["09:40","10:00",
+    "Istirahat Pertama",
+    "",
+    "☕"],
+
+    ["10:00","10:40",
+    "Bahasa Indonesia",
+    "Ibu Yuyun",
+    "🇮🇩"],
+
+    ["10:40","12:00",
+    "Pendidikan Agama Islam",
+    "Ibu Ainur",
+    "☪️"],
+
+    ["12:00","12:30",
+    "Istirahat Kedua",
+    "",
+    "🍱"],
+
+    ["12:30","13:10",
+    "Pendidikan Agama Islam",
+    "Ibu Ainur",
+    "☪️"],
+
+    ["13:10","15:10",
+    "Fisika",
+    "Ibu Nia",
+    "⚛️"]
+
+],
+
+
+"Kamis": [
+
+    ["06:30","07:00",
+    "Pembiasaan/Kokurikuler",
+    "",
+    "🌱"],
+
+    ["07:00","09:00",
+    "PJOK",
+    "Bapak Endang",
+    "🏃"],
+
+    ["09:00","09:40",
+    "Kimia",
+    "Ibu ANi",
+    "🧪"],
+
+    ["09:40","10:00",
+    "Istirahat Pertama",
+    "",
+    "☕"],
+
+    ["10:00","10:40",
+    "Kimia",
+    "Ibu ANi",
+    "🧪"],
+
+    ["10:40","12:00",
+    "Matematika",
+    "Ibu Isnaeni",
+    "📐"],
+
+    ["12:00","12:30",
+    "Istirahat Kedua",
+    "",
+    "🍱"],
+
+    ["12:30","13:50",
+    "Seni Budaya",
+    "Bapak Dedi",
+    "🎨"]
+
+],
+
+
+"Jumat": [
+
+    ["06:30","07:15",
+    "Pembiasaan/Kokurikuler",
+    "",
+    "🌱"],
+
+    ["07:15","08:35",
+    "Matematika",
+    "Ibu Isnaeni",
+    "📐"],
+
+    ["08:35","09:15",
+    "PPKn",
+    "Ibu Seni",
+    "🇮🇩"],
+
+    ["09:15","09:35",
+    "Istirahat",
+    "",
+    "☕"],
+
+    ["09:35","10:15",
+    "PPKn",
+    "Ibu Seni",
+    "🇮🇩"],
+
+    ["10:15","10:55",
+    "Bahasa Sunda",
+    "Ibu WInda",
+    "🗣️"],
+
+    ["10:55","11:35",
+    "Bimbingan Konseling",
+    "Ibu Irma",
+    "💬"]
+
+]
+
+};
+
+
+/* =====================================================
+   IKON HARI
+===================================================== */
+
+const dayIcons = {
+
+    "Senin":"🌟",
+
+    "Selasa":"🚀",
+
+    "Rabu":"🌈",
+
+    "Kamis":"⭐",
+
+    "Jumat":"🎉"
+
+};
+
+
+/* =====================================================
+   CLASS WARNA
+===================================================== */
+
+function getSubjectClass(subject) {
+
+    const s =
+        subject.toLowerCase();
+
+    if (s.includes("inggris"))
+        return "subject-inggris";
+
+    if (s.includes("indonesia"))
+        return "subject-indonesia";
+
+    if (s.includes("informatika"))
+        return "subject-informatika";
+
+    if (s.includes("geografi"))
+        return "subject-geografi";
+
+    if (s.includes("fisika"))
+        return "subject-fisika";
+
+    if (s.includes("kimia"))
+        return "subject-kimia";
+
+    if (s.includes("matematika"))
+        return "subject-matematika";
+
+    if (s.includes("sejarah"))
+        return "subject-sejarah";
+
+    if (s.includes("pjok"))
+        return "subject-pjok";
+
+    if (s.includes("seni"))
+        return "subject-seni";
+
+    if (s.includes("agama"))
+        return "subject-pai";
+
+    if (s.includes("ppkn"))
+        return "subject-ppkn";
+
+    if (s.includes("sunda"))
+        return "subject-sunda";
+
+    if (s.includes("konseling"))
+        return "subject-bk";
+
+    return "";
+
+}
+
+
+/* =====================================================
+   RENDER JADWAL
+===================================================== */
+
+function renderSchedule() {
+
+    const container =
+        document.getElementById(
+            "schedule"
+        );
+
+    container.innerHTML = "";
+
+
+    for (
+        const day in scheduleData
+    ) {
+
+
+        const dayDiv =
+            document.createElement(
+                "div"
+            );
+
+
+        dayDiv.className =
+            "day";
+
+
+        dayDiv.dataset.day =
+            day;
+
+
+        dayDiv.innerHTML = `
+
+            <div class="day-title">
+
+                <h2>
+                    ${day}
+                </h2>
+
+                <div class="day-emoji">
+                    ${dayIcons[day]}
+                </div>
+
+            </div>
+
+        `;
+
+
+        scheduleData[day]
+        .forEach(item => {
+
+
+            const [
+                start,
+                end,
+                subject,
+                teacher,
+                icon
+            ] = item;
+
+
+            const isBreak =
+
+                subject
+                .toLowerCase()
+                .includes("istirahat")
+
+                ||
+
+                subject
+                .toLowerCase()
+                .includes("pembiasaan")
+
+                ||
+
+                subject
+                .toLowerCase()
+                .includes("upacara");
+
+
+            const lesson =
+                document.createElement(
+                    "div"
+                );
+
+
+            lesson.className =
+
+                "lesson " +
+
+                getSubjectClass(
+                    subject
+                );
+
+
+            lesson.dataset.start =
+                start;
+
+            lesson.dataset.end =
+                end;
+
+            lesson.dataset.day =
+                day;
+
+            lesson.dataset.subject =
+                subject.toLowerCase();
+
+            lesson.dataset.teacher =
+                teacher.toLowerCase();
+
+
+            lesson.innerHTML = `
+
+                <span
+                    class="subject-icon"
+                >
+                    ${icon}
+                </span>
+
+
+                <div
+                    class="lesson-time"
+                >
+                    ⏰ ${start}
+                    -
+                    ${end}
+                </div>
+
+
+                <div
+                    class="lesson-name"
+                >
+                    ${subject}
+                </div>
+
+
+                ${
+                    teacher
+                    ?
+                    `
+                    <div class="teacher">
+                        👨‍🏫 ${teacher}
+                    </div>
+                    `
+                    :
+                    `
+                    <div class="teacher">
+                        ✨ Kegiatan kelas
+                    </div>
+                    `
+                }
+
+
+                <div class="status"></div>
+
+            `;
+
+
+            dayDiv.appendChild(
+                lesson
+            );
+
+        });
+
+
+        container.appendChild(
+            dayDiv
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   TIME
+===================================================== */
+
+function timeToMinutes(time) {
+
+    const [
+        h,
+        m
+    ] =
+    time
+    .split(":")
+    .map(Number);
+
+
+    return h * 60 + m;
+
+}
+
+
+/* =====================================================
+   JAM REAL TIME
+===================================================== */
+
+function updateClock() {
+
+
+    const now =
+        new Date();
+
+
+    const h =
+        String(
+            now.getHours()
+        ).padStart(2,"0");
+
+
+    const m =
+        String(
+            now.getMinutes()
+        ).padStart(2,"0");
+
+
+    const s =
+        String(
+            now.getSeconds()
+        ).padStart(2,"0");
+
+
+    document
+    .getElementById(
+        "clock"
+    )
+    .textContent =
+        `${h}:${m}:${s}`;
+
+
+    document
+    .getElementById(
+        "date"
+    )
+    .textContent =
+
+        now.toLocaleDateString(
+            "id-ID",
+            {
+                weekday:
+                "long",
+
+                day:
+                "numeric",
+
+                month:
+                "long",
+
+                year:
+                "numeric"
+            }
+        );
+
+
+    updateCurrentLesson();
+
+}
+
+
+/* =====================================================
+   PELAJARAN SEKARANG
+===================================================== */
+
+function updateCurrentLesson() {
+
+
+    const now =
+        new Date();
+
+
+    const currentMinutes =
+
+        now.getHours() * 60
+        +
+        now.getMinutes();
+
+
+    const dayName =
+
+        now.toLocaleDateString(
+            "id-ID",
+            {
+                weekday:
+                "long"
+            }
+        );
+
+
+    const lessons =
+        scheduleData[dayName];
+
+
+    document
+    .querySelectorAll(
+        ".lesson"
+    )
+    .forEach(
+        el => {
+
+            el.classList
+            .remove(
+                "active"
+            );
+
+            const status =
+                el.querySelector(
+                    ".status"
+                );
+
+            if(status)
+                status.innerHTML =
+                "";
+
+        }
+    );
+
+
+    if(!lessons) {
+
+        document
+        .getElementById(
+            "currentLesson"
+        )
+        .innerHTML =
+        "🎉 Tidak ada jadwal hari ini";
+
+
+        document
+        .getElementById(
+            "nextLesson"
+        )
+        .innerHTML =
+        "🏖️ Nikmati harimu!";
+
+
+        document
+        .getElementById(
+            "countdown"
+        )
+        .textContent =
+        "—";
+
+
+        return;
+
+    }
+
+
+    let current =
+        null;
+
+    let next =
+        null;
+
+
+    for(
+        const lesson
+        of lessons
+    ) {
+
+
+        const start =
+            timeToMinutes(
+                lesson[0]
+            );
+
+
+        const end =
+            timeToMinutes(
+                lesson[1]
+            );
+
+
+        if(
+
+            currentMinutes >= start
+
+            &&
+
+            currentMinutes < end
+
+        ) {
+
+            current =
+                lesson;
+
+        }
+
+
+        if(
+
+            start > currentMinutes
+
+            &&
+
+            !next
+
+        ) {
+
+            next =
+                lesson;
+
+        }
+
+    }
+
+
+    if(current) {
+
+
+        document
+        .getElementById(
+            "currentLesson"
+        )
+        .innerHTML = `
+
+            <strong>
+                ${current[4]}
+                ${current[2]}
+            </strong>
+
+            <br>
+
+            ⏰ ${current[0]}
+            -
+            ${current[1]}
+
+            ${
+                current[3]
+                ?
+                `<br>
+                 👨‍🏫
+                 ${current[3]}`
+                :
+                ""
+            }
+
+        `;
+
+
+        document
+        .querySelectorAll(
+            ".lesson"
+        )
+        .forEach(
+            el => {
+
+
+                if(
+
+                    el.dataset.day
+                    === dayName
+
+                    &&
+
+                    el.dataset.start
+                    === current[0]
+
+                ) {
+
+
+                    el.classList
+                    .add(
+                        "active"
+                    );
+
+
+                    el.querySelector(
+                        ".status"
+                    ).innerHTML =
+
+                    `
+                    <span
+                        class="active-badge"
+                    >
+                        🟢 SEDANG BERLANGSUNG
+                    </span>
+                    `;
+
+                }
+
+            }
+        );
+
+
+        const endMinutes =
+            timeToMinutes(
+                current[1]
+            );
+
+
+        const remaining =
+            endMinutes
+            -
+            currentMinutes;
+
+
+        document
+        .getElementById(
+            "countdown"
+        )
+        .textContent =
+
+        `${remaining} menit lagi`;
+
+    }
+
+
+    else {
+
+
+        document
+        .getElementById(
+            "currentLesson"
+        )
+        .innerHTML =
+        "😴 Tidak ada pelajaran sekarang";
+
+    }
+
+
+    if(next) {
+
+
+        document
+        .getElementById(
+            "nextLesson"
+        )
+        .innerHTML = `
+
+            <strong>
+                ${next[4]}
+                ${next[2]}
+            </strong>
+
+            <br>
+
+            ⏰ ${next[0]}
+            -
+            ${next[1]}
+
+            ${
+                next[3]
+                ?
+                `<br>
+                 👨‍🏫
+                 ${next[3]}`
+                :
+                ""
+            }
+
+        `;
+
+
+        const diff =
+
+            timeToMinutes(
+                next[0]
+            )
+            -
+            currentMinutes;
+
+
+        document
+        .getElementById(
+            "countdown"
+        )
+        .textContent =
+
+        `${diff} menit menuju ${next[2]}`;
+
+    }
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+function searchSchedule() {
+
+
+    const query =
+
+        document
+        .getElementById(
+            "search"
+        )
+        .value
+        .toLowerCase();
+
+
+    document
+    .querySelectorAll(
+        ".lesson"
+    )
+    .forEach(
+        lesson => {
+
+
+            const match =
+
+                lesson.dataset
+                .subject
+                .includes(
+                    query
+                )
+
+                ||
+
+                lesson.dataset
+                .teacher
+                .includes(
+                    query
+                );
+
+
+            lesson.style.display =
+
+                match
+                ?
+                "block"
+                :
+                "none";
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   FILTER HARI
+===================================================== */
+
+function filterDay() {
+
+
+    const selected =
+
+        document
+        .getElementById(
+            "dayFilter"
+        )
+        .value;
+
+
+    document
+    .querySelectorAll(
+        ".day"
+    )
+    .forEach(
+        day => {
+
+
+            day.style.display =
+
+                selected === "all"
+
+                ||
+
+                day.dataset.day
+                === selected
+
+                ?
+
+                "block"
+
+                :
+
+                "none";
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+
+function toggleDark() {
+
+
+    document.body
+    .classList
+    .toggle(
+        "dark"
+    );
+
+
+    localStorage.setItem(
+
+        "darkMode",
+
+        document.body
+        .classList
+        .contains(
+            "dark"
+        )
+
+    );
+
+}
+
+
+if(
+
+    localStorage.getItem(
+        "darkMode"
+    )
+    ===
+    "true"
+
+) {
+
+    document.body
+    .classList
+    .add(
+        "dark"
+    );
+
+}
+
+
+/* =====================================================
+   SISTEM TUGAS
+===================================================== */
+
+let tasks =
+
+    JSON.parse(
+
+        localStorage.getItem(
+            "schoolTasks"
+        )
+
+    )
+
+    ||
+
+    [];
+
+
+/* =====================================================
+   SIMPAN TUGAS
+===================================================== */
+
+function saveTasks() {
+
+    localStorage.setItem(
+
+        "schoolTasks",
+
+        JSON.stringify(
+            tasks
+        )
+
+    );
+
+}
+
+
+/* =====================================================
+   TAMBAH TUGAS
+===================================================== */
+
+function addTask() {
+
+
+    const name =
+
+        document
+        .getElementById(
+            "taskName"
+        )
+        .value
+        .trim();
+
+
+    const subject =
+
+        document
+        .getElementById(
+            "taskSubject"
+        )
+        .value
+        .trim();
+
+
+    const date =
+
+        document
+        .getElementById(
+            "taskDate"
+        )
+        .value;
+
+
+    if(!name || !date) {
+
+        alert(
+            "⚠️ Isi nama tugas dan tanggal deadline!"
+        );
+
+        return;
+
+    }
+
+
+    tasks.push({
+
+        id:
+        Date.now(),
+
+        name:
+        name,
+
+        subject:
+        subject ||
+        "Umum",
+
+        date:
+        date,
+
+        done:
+        false
+
+    });
+
+
+    saveTasks();
+
+    renderTasks();
+
+
+    document
+    .getElementById(
+        "taskName"
+    )
+    .value = "";
+
+
+    document
+    .getElementById(
+        "taskSubject"
+    )
+    .value = "";
+
+
+    document
+    .getElementById(
+        "taskDate"
+    )
+    .value = "";
+
+
+    alert(
+        "🎉 Tugas berhasil ditambahkan!"
+    );
+
+}
+
+
+/* =====================================================
+   RENDER TUGAS
+===================================================== */
+
+function renderTasks() {
+
+
+    const list =
+
+        document
+        .getElementById(
+            "taskList"
+        );
+
+
+    list.innerHTML = "";
+
+
+    if(tasks.length === 0) {
+
+        list.innerHTML = `
+
+            <div
+                style="
+                text-align:center;
+                padding:30px;
+                color:#64748b;
+                "
+            >
+
+                🎉 Belum ada tugas!
+
+                <br>
+
+                Tambahkan tugas pertamamu
+                di atas.
+
+            </div>
+
+        `;
+
+        updateStats();
+
+        return;
+
+    }
+
+
+    tasks.sort(
+
+        (a,b) =>
+
+        new Date(a.date)
+        -
+        new Date(b.date)
+
+    );
+
+
+    tasks.forEach(
+        task => {
+
+
+            const div =
+                document
+                .createElement(
+                    "div"
+                );
+
+
+            div.className =
+
+                "task "
+
+                +
+
+                (
+                    task.done
+                    ?
+                    "done"
+                    :
+                    ""
+                );
+
+
+            div.innerHTML = `
+
+                <div
+                    class="task-info"
+                >
+
+                    <strong>
+                        📌
+                        ${task.name}
+                    </strong>
+
+                    <small>
+
+                        📚
+                        ${task.subject}
+
+                        <br>
+
+                        📅 Deadline:
+                        ${formatDate(
+                            task.date
+                        )}
+
+                    </small>
+
+                </div>
+
+
+                <button
+                    class="complete"
+                    onclick="
+                    toggleTask(
+                        ${task.id}
+                    )
+                    "
+                >
+
+                    ${
+                        task.done
+                        ?
+                        "↩️ BATAL"
+                        :
+                        "✅ SELESAI"
+                    }
+
+                </button>
+
+
+                <button
+                    class="delete"
+                    onclick="
+                    deleteTask(
+                        ${task.id}
+                    )
+                    "
+                >
+
+                    🗑️ HAPUS
+
+                </button>
+
+            `;
+
+
+            list.appendChild(
+                div
+            );
+
+        }
+    );
+
+
+    updateStats();
+
+}
+
+
+/* =====================================================
+   STATISTIK TUGAS
+===================================================== */
+
+function updateStats() {
+
+
+    const total =
+        tasks.length;
+
+
+    const done =
+
+        tasks.filter(
+            task =>
+            task.done
+        ).length;
+
+
+    const pending =
+        total - done;
+
+
+    const progress =
+
+        total === 0
+
+        ?
+
+        0
+
+        :
+
+        Math.round(
+            (
+                done
+                /
+                total
+            )
+            *
+            100
+        );
+
+
+    document
+    .getElementById(
+        "totalTasks"
+    )
+    .textContent =
+        total;
+
+
+    document
+    .getElementById(
+        "doneTasks"
+    )
+    .textContent =
+        done;
+
+
+    document
+    .getElementById(
+        "pendingTasks"
+    )
+    .textContent =
+        pending;
+
+
+    document
+    .getElementById(
+        "progressText"
+    )
+    .textContent =
+        progress
+        +
+        "%";
+
+
+    document
+    .getElementById(
+        "progressBar"
+    )
+    .style.width =
+        progress
+        +
+        "%";
+
+}
+
+
+/* =====================================================
+   SELESAI / BATAL
+===================================================== */
+
+function toggleTask(id) {
+
+
+    const task =
+
+        tasks.find(
+            t =>
+            t.id === id
+        );
+
+
+    if(task) {
+
+        task.done =
+            !task.done;
+
+        saveTasks();
+
+        renderTasks();
+
+    }
+
+}
+
+
+/* =====================================================
+   HAPUS
+===================================================== */
+
+function deleteTask(id) {
+
+
+    if(
+
+        confirm(
+            "🗑️ Yakin ingin menghapus tugas ini?"
+        )
+
+    ) {
+
+
+        tasks =
+
+            tasks.filter(
+
+                task =>
+                task.id !== id
+
+            );
+
+
+        saveTasks();
+
+        renderTasks();
+
+    }
+
+}
+
+
+/* =====================================================
+   FORMAT TANGGAL
+===================================================== */
+
+function formatDate(date) {
+
+
+    return new Date(
+        date
+    )
+    .toLocaleDateString(
+
+        "id-ID",
+
+        {
+
+            weekday:
+            "long",
+
+            day:
+            "numeric",
+
+            month:
+            "long",
+
+            year:
+            "numeric"
+
+        }
+
+    );
+
+}
+
+
+/* =====================================================
+   START
+===================================================== */
+
+renderSchedule();
+
+renderTasks();
+
+updateClock();
+
+
+setInterval(
+    updateClock,
+    1000
+);
+
+
+/* =====================================================
+   KONFIRMASI DEADLINE
+===================================================== */
+
+setInterval(
+
+    function() {
+
+
+        const today =
+
+            new Date()
+            .toISOString()
+            .split("T")[0];
+
+
+        const todayTasks =
+
+            tasks.filter(
+
+                task =>
+
+                task.date === today
+
+                &&
+
+                !task.done
+
+            );
+
+
+        if(
+            todayTasks.length > 0
+        ) {
+
+            document.title =
+                "🔔 Ada Tugas Hari Ini!";
+
+        }
+        else {
+
+            document.title =
+                "📚 JADWAL XII-1 SMAN 2 CIMAHI";
+
+        }
+
+    },
+
+    60000
+
+);
+
+</script>
+
+
+</body>
+
+</html>
+```
